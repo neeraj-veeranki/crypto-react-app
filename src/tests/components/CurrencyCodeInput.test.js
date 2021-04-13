@@ -14,7 +14,6 @@ describe("CurrencyCodeInput", () => {
             onChangeCryptoCode: jest.fn()
         }
         const wrapper = shallow(<CurrencyCodeInput {...props} />);
-        console.log('', JSON.stringify(wrapper.find('select')));
         wrapper
         .find(NativeSelect)
         .simulate("change", { target: { value: 'BTC' } });
