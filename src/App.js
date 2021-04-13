@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import Button from '@material-ui/core/Button';
 import Header from './components/Header';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,7 +8,7 @@ import CurrencyList from './components/CurrencyList';
 import AlertComponent from './components/Alert';
 import ApiConfig from './services/ApiConfig';
 
-
+// Getting api config from a config file.
 const BASE_URL = ApiConfig.apiBaseUrl;
 const api_key = ApiConfig.apiKey;
 const targetCurrencies =  ApiConfig.targetCurrencies;
@@ -29,7 +28,6 @@ function App() {
   const [errorMessage, setErrorMessage] = useState('');
   const [errorType, setErrorType] = useState('');
   const [currencyData, setcurrencyData] = useState([{}]);
-
 
   function handleCryptoCodeChange(e) {
     setBtnDisabled(false);
