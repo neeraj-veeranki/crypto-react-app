@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
-
+// Header component for the application.
 export default function Header() {
   const classes = useStyles();
 

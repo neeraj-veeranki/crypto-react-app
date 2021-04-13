@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import NativeSelect from '@material-ui/core/NativeSelect';
 
+// Style components from material ui.
 const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
       },
   }));
 
+  // CurrencyCodeInput component where we show the list of currencies to the users.
 export default function CurrencyCodeInput(props) {
     const {
         cryptoCode,

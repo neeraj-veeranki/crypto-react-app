@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
+// Style components from material ui.
 const useStyles = makeStyles({
   table: {
     minWidth: 350,
@@ -32,6 +33,7 @@ const StyledTableCell = withStyles((theme) => ({
     },
   }))(TableRow);
 
+// CurrencyList component where we show the user the list of necessary currencies and their values against the crytocurrency chosen by user.
 export default function CurrencyList(props) {
   const {currencyData} = props;
   const classes = useStyles();

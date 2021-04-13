@@ -5,7 +5,7 @@ import CurrencyCodeInput from "../../components/CurrencyCodeInput";
 
 describe("CurrencyCodeInput", () => {
     let shallow;
-    beforeAll(() => {  // This is Mocha; in Jest, use beforeAll
+    beforeAll(() => {  
         shallow = createShallow();
     });
     it("onchangeprop should get called on simulating  changes in select element", () => {

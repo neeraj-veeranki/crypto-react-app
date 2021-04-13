@@ -19,6 +19,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+// Main app 
 function App() {
   const style = useStyles;
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -29,11 +30,13 @@ function App() {
   const [errorType, setErrorType] = useState('');
   const [currencyData, setcurrencyData] = useState([{}]);
 
+  // Function to handle state after the crypto currency is changed.
   function handleCryptoCodeChange(e) {
     setBtnDisabled(false);
     setcryptoCode(e.target.value);
   }
 
+  // Function to process the currency values after we receive data from the server.
   function processCurrencyValues(data) {
     if(data && data.error) {
       setErrorType('error');
@@ -53,6 +56,8 @@ function App() {
     setShowCurrencyData(true);
   }
   }
+
+  // Function to get quotes from the api using fetch.
   async function getQuotes() {
     setShowErrorMessage(false);
     setShowCurrencyData(false);
